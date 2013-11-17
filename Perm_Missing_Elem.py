@@ -3,7 +3,6 @@ A zero-indexed array A consisting of N different integers is given. The array co
 Your goal is to find that missing element.
 """
 """
-This works for 1st N natural numbers
 Generalized solution
     1.total=sum(a)
     2.for i in range(min(a)):
@@ -12,7 +11,7 @@ Generalized solution
         y+=1
     4.return y-x-total
 
-The above code returns missing number within any range
+The above code returns missing number within any range,i.e it need not be first N natural numbers
 Ex - (11,12,14)
 
 Note:This works if and only if 1 number is missing 
