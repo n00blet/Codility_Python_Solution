@@ -17,15 +17,16 @@ Write a function:
 
 
 def solution(a):
-	y=len(a)
-	if y==0:
-		return 0
-	z=max(a)
-	if z>y:
-		return 0
-	else:
-		for i in a:
-			if a.count(i)>1:
-				return 0
-			else:
-				return 1
+    y=len(a)
+    lst=[0]*y
+    for i in range(y):
+        num=a[i]
+        if num<=y:
+            lst[num-1]+=1
+        else:
+            return 0
+    for i in range(len(lst)):
+        if lst[i]!=1:
+            return 0
+    return 1
+print solution([4,2,1,3])

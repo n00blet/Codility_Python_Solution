@@ -6,21 +6,15 @@ Your goal is to find that missing element.
 import time
 s=time.time()
 def solution(a):
-    c=len(a)
-    if c==0:
-        return 1
-    if c==1 and a[0]==2:
-        return 1
-    if c==1 and a[0]>2:
+    n=len(a)
+    if max(a)>n+1:
         return -1
-    if c==max(a):
-        return -1
-    x,y=0,0
-    for i in range(1,min(a)):
-        x+=i
-    for i in range(1,max(a)+1):
-        y+=i
-    return y-x-sum(a)
+    if n==0:
+        return 1
+    sums=(n+2)*(n+1)/2
+    for i in range(n):
+        sums-=a[i]
+    return sums
     
 print solution([2])
 print time.time()-s

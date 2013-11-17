@@ -20,5 +20,5 @@ def solution(X,Y,D):
     
 print solution(10,115,30)
 print s-time.time()
-# you can check for any large number of x and y and D,cuz the above solution has O(1) time complexity
+# you can check for any large number of x and y and D,cuz the above solution has O(n) time complexity
 

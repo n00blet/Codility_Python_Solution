@@ -32,7 +32,7 @@ def solution(a):
     minimum = abs(total - 2*left)
     for i in range(1,y):
         left+=a[i]
-        temp = abs(2*left - total)
+        temp = abs(total - 2*left)
         if minimum > temp:
             minimum=temp
     return minimum            
